@@ -1,3 +1,5 @@
+// import "../static/libraries/p5.min.js";
+
 class Boid {
 	constructor(x, y) {
 		this.acceleration = createVector(0, 0);
@@ -159,3 +161,5 @@ class Boid {
 		}
 	}
 }
+
+// export {Boid};

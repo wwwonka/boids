@@ -15,3 +15,5 @@ class Flock {
 		this.boids.push(b);
 	}
 }
+
+// export {Flock};

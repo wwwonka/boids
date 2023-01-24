@@ -1,0 +1,27 @@
+{
+	"name": "boids-p5",
+	"version": "1.0.0",
+	"description": "A so-called 'social experiment' around analogical mixtapes",
+	"private": true,
+	"license": "UNLICENSED",
+	"author": "wwwonka <julien.m.miquelon@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wwwonka/mixtape.git"
+	},
+	"homepage": "https://github.com/wwwonka/mixtape#readme",
+	"bugs": {
+		"url": "https://github.com/wwwonka/mixtape/issues"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"vite": "^4.0.4",
+		"vite-plugin-minify": "^1.5.2",
+		"vite-plugin-mkcert": "^1.10.1"
+	}
+}
