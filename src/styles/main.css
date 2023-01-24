@@ -1,0 +1,77 @@
+:root,
+* {
+	/* This will prevent zooming on mobile https://stackoverflow.com/questions/4472891/how-can-i-disable-zoom-on-a-mobile-web-page */
+	touch-action: manipulation;
+	scrollbar-width: none;
+}
+/*===============================================*/
+
+/* This will disable blue highlighting when user pushes a button */
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*===============================================*/
+
+html {
+	/* See: https://itnext.io/make-your-pwas-look-handsome-on-ios-fd8fdfcd5777 */
+	min-height: calc(100% + env(safe-area-inset-top));
+	padding: env(safe-area-inset-top) env(safe-area-inset-right)
+		env(safe-area-inset-bottom) env(safe-area-inset-left);
+	cursor: default;
+}
+
+body {
+	/* remove margins and scroll bars */
+	margin: 0;
+	overflow: hidden;
+
+	/* style text */
+	text-align: center;
+	font-size: 12px;
+	font-family: Sans-Serif;
+
+	background-color: white;
+
+	/* prevent Pull to refresh in Chrome */
+	overscroll-behavior-y: contain;
+
+	/* color text */
+	/* color: rgb(175, 175, 175); */
+
+	/*disable scrollbar in firefox */
+}
+
+/* hide scrollbars without impacting scrolling https://blog.logrocket.com/hide-scrollbar-without-impacting-scrolling-css/ */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+#scene-container {
+	/* tell our scene container to take up the full page */
+	position: absolute;
+	width: 100%;
+	/* height: 93%; */
+	height: 100%;
+	/*
+    Set the container's background color to the same as the scene's
+    background to prevent flashing on load
+  */
+	background-color: #f2f2f2;
+	/*
+    This will ensure that the element can't be highlighted when long-tapping
+  */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+canvas {
+	box-sizing: border-box;
+	outline: none;
+	/* height: 90vh; */
+	/* border: 2px black solid; */
+	/* border-radius: 15px; */
+	/* background: #73ad21; */
+}
