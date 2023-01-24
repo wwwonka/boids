@@ -2,7 +2,7 @@ let flock;
 
 function setup() {
 	createCanvas(window.innerWidth, window.innerHeight);
-	createP("Drag the mouse to generate new boids.");
+	// createP("Drag the mouse to generate new boids.");
 
 	flock = new Flock();
 	// Add an initial set of boids into the system
