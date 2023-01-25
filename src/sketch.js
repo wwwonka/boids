@@ -1,3 +1,5 @@
+window.gpu = new GPU();
+
 let flock;
 
 function setup() {

@@ -1,5 +1,4 @@
 // import "../static/libraries/p5.min.js";
-
 class Boid {
 	constructor(x, y) {
 		this.acceleration = createVector(0, 0);
@@ -72,6 +71,7 @@ class Boid {
 		endShape(CLOSE);
 		pop();
 	}
+
 	// Wraparound
 	borders() {
 		if (this.position.x < -this.r) this.position.x = width + this.r;
@@ -86,6 +86,8 @@ class Boid {
 		let desiredseparation = 25.0;
 		let steer = createVector(0, 0);
 		let count = 0;
+
+		const multiplyMatrix = gpu.createKernel(function () {});
 		// For every boid in the system, check if it's too close
 		for (let i = 0; i < boids.length; i++) {
 			let d = p5.Vector.dist(this.position, boids[i].position);
